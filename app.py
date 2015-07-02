@@ -95,7 +95,9 @@ def my_progress(dev, msg):
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
-
+           
+## Refer to the below code
+## http://code.runnable.com/UiPcaBXaxGNYAAAL/how-to-upload-a-file-to-the-server-in-flask-for-python
 @app.route('/upload', methods=['GET','POST'])
 def upload():
     if request.method == 'GET':
